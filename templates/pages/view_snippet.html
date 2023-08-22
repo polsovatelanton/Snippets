@@ -14,7 +14,7 @@
 
         <div class="row">
             <div class="col">
-                <p>На данной страницы будут отображаться все созданные сниппеты.</p>
+                <p>На данной страницы будет отображаться информация о сниппете.</p>
                 <p>Пока тут просто пример, но скоро заменим реальными сниппетами из БД!</p>
                 <hr>
             </div>
@@ -31,18 +31,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {% for snippet in snippets %}
                     <tr>
                         <td scope="row"> {{snippet.id}} </td>
                         <td><a href="/snippet/1"> {{ snippet.name }} </a></td>
                         <td>{{ snippet.creation_date}}</td>
                     </tr>
-                    {% endfor %}
                     </tbody>
                 </table>
-                <div align="right">
-                    <i style="color: gray;">Всего сниппетов: {{count}}</i>
-                </div>
             </div>
         </div>
     </div>
